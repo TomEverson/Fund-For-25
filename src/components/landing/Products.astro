@@ -1,0 +1,68 @@
+---
+const getRandomElement = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+const getRandomPrice = () => `$${(Math.random() * 50 + 5).toFixed(2)}`; // Random price between $5.00 and $50.00
+
+const products = Array.from({ length: 25 }, (_, index) => ({
+  title: getRandomElement([
+    "Landscape Photography Print",
+    "Portrait Photography",
+    "Black & White Photography",
+    "Nature Photography",
+    "Urban Photography",
+    "Wedding Photography Print",
+    "Travel Photography",
+    "Abstract Photography",
+    "Fine Art Photography",
+    "Photojournalism Print",
+  ]),
+  subtitle: getRandomElement([
+    "Sunset in the Mountains",
+    "Urban Streets at Night",
+    "Foggy Forest",
+    "City Skyline",
+    "Classic Black & White",
+    "Tropical Beaches",
+    "Candid Portrait",
+    "Abstract Geometries",
+    "Nature's Beauty",
+    "Adventure Awaits",
+  ]),
+  image: `/photo_resized/Photo-${index + 1}.png`, // Randomly generated image path (e.g., Photo-1, Photo-2, etc.)
+  price: getRandomPrice(), // Random price
+}));
+---
+
+<main>
+  <div class="relative mx-auto px-8 max-w-7xl py-12 md:px-12">
+    <div class="grid grid-cols-1 gap-6 lg:gap-y-32 md:grid-cols-2">
+      {
+        products.map((product) => (
+          <figure key={product.title}>
+            <img
+              class="w-full rounded-3xl shadow-2xl"
+              src={product.image}
+              alt=""
+              width="1310"
+              height="873"
+            />
+            <div class="mt-4 flex justify-between px-6">
+              <div>
+                <h3 class="text-sm text-negroni-500">
+                  <a href="#">
+                    <span aria-hidden="true" class="absolute inset-0" />
+                    {product.title}
+                  </a>
+                </h3>
+                <p class="mt-1 text-lg font-medium leading-6 text-white">
+                  {product.subtitle}
+                </p>
+              </div>
+              <p class="text-base text-tomato-500">{product.price}</p>
+            </div>
+          </figure>
+        ))
+      }
+    </div>
+  </div>
+</main>
