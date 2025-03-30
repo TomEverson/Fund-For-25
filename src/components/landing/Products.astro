@@ -35,10 +35,10 @@ const products = Array.from({ length: 25 }, (_, index) => ({
 
 <main>
   <div class="relative mx-auto px-8 max-w-7xl py-12 md:px-12">
-    <div class="grid grid-cols-1 gap-6 lg:gap-y-32 md:grid-cols-2">
+    <div class="grid grid-cols-1 gap-8 lg:gap-y-32 md:grid-cols-2">
       {
         products.map((product) => (
-          <figure key={product.title}>
+          <figure>
             <img
               class="w-full rounded-3xl shadow-2xl"
               src={product.image}
@@ -48,17 +48,17 @@ const products = Array.from({ length: 25 }, (_, index) => ({
             />
             <div class="mt-4 flex justify-between px-6">
               <div>
-                <h3 class="text-sm text-negroni-500">
+                <h3 class="text-sm text-sunset-roasted">
                   <a href="#">
                     <span aria-hidden="true" class="absolute inset-0" />
                     {product.title}
                   </a>
                 </h3>
-                <p class="mt-1 text-lg font-medium leading-6 text-white">
+                <p class="mt-1 text-lg font-medium leading-6 text-sunset-goldmine">
                   {product.subtitle}
                 </p>
               </div>
-              <p class="text-base text-tomato-500">{product.price}</p>
+              <p class="text-base text-red-500">{product.price}</p>
             </div>
           </figure>
         ))
