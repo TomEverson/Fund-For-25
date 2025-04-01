@@ -2,11 +2,11 @@
 
 @theme {
   /* Sunset Gold (Custom Palette) */
-  --color-sunset-sunbeam: #f9da70; /* BG */
+  --color-sunset-sunbeam: #ffffe9; /* BG */
   --color-sunset-mango: #ffb114; /* Buttons, highlights */
   --color-sunset-goldmine: #df9c16; /* UI accents */
   --color-sunset-earthwood: #936c1c; /* Secondary text */
-  --color-sunset-roasted: #5b4312; /* Primary text */
+  --color-sunset-roasted: #493737; /* Primary text */
 }
 
 @font-face {

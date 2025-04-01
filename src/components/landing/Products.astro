@@ -1,36 +1,5 @@
 ---
-const getRandomElement = (arr) => arr[Math.floor(Math.random() * arr.length)];
-
-const getRandomPrice = () => `$${(Math.random() * 50 + 5).toFixed(2)}`; // Random price between $5.00 and $50.00
-
-const products = Array.from({ length: 25 }, (_, index) => ({
-  title: getRandomElement([
-    "Landscape Photography Print",
-    "Portrait Photography",
-    "Black & White Photography",
-    "Nature Photography",
-    "Urban Photography",
-    "Wedding Photography Print",
-    "Travel Photography",
-    "Abstract Photography",
-    "Fine Art Photography",
-    "Photojournalism Print",
-  ]),
-  subtitle: getRandomElement([
-    "Sunset in the Mountains",
-    "Urban Streets at Night",
-    "Foggy Forest",
-    "City Skyline",
-    "Classic Black & White",
-    "Tropical Beaches",
-    "Candid Portrait",
-    "Abstract Geometries",
-    "Nature's Beauty",
-    "Adventure Awaits",
-  ]),
-  image: `/photo_resized/Photo-${index + 1}.png`, // Randomly generated image path (e.g., Photo-1, Photo-2, etc.)
-  price: getRandomPrice(), // Random price
-}));
+import products from "./products.json";
 ---
 
 <main>
@@ -41,7 +10,7 @@ const products = Array.from({ length: 25 }, (_, index) => ({
           <figure>
             <img
               class="w-full rounded-3xl shadow-2xl"
-              src={product.image}
+              src={`photo_resized/${product.id}.png`}
               alt=""
               width="1310"
               height="873"
@@ -51,14 +20,14 @@ const products = Array.from({ length: 25 }, (_, index) => ({
                 <h3 class="text-sm text-sunset-roasted">
                   <a href="#">
                     <span aria-hidden="true" class="absolute inset-0" />
-                    {product.title}
+                    {product.artist}
                   </a>
                 </h3>
                 <p class="mt-1 text-lg font-medium leading-6 text-sunset-goldmine">
-                  {product.subtitle}
+                  {product.title}
                 </p>
               </div>
-              <p class="text-base text-red-500">{product.price}</p>
+              <p class="text-base text-red-500">ID#{product.id}</p>
             </div>
           </figure>
         ))
