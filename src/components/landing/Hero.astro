@@ -1,5 +1,10 @@
+---
+import BuyNow from "./BuyNow.astro";
+---
+
 <main class="relative overflow-hidden">
   <div class="relative mx-auto px-8 max-w-7xl py-24 md:px-12">
+    <!-- Hero Section -->
     <div class="mx-auto text-center">
       <h1
         class="text-sunset-roasted font-light md:text-8xl text-6xl tracking-tight"
@@ -15,6 +20,7 @@
           href="https://www.example.com/conceptians"
           class="text-blue-500 hover:text-sunset-mango hover:underline"
           >Conceptians</a
+        >
         > to raise funds for the victims of the 7.7-magnitude earthquake that struck
         Myanmar on March 28, 2025. Lives were lost, homes were destroyed, and communities
         are struggling to rebuild. Many historical and religious sites, buildings
@@ -22,14 +28,16 @@
         cultures. Even the smallest act of support can make a difference in the face
         of such devastation.
       </p>
+
       <p class="mt-8 text-sunset-earthwood">
-        This fundraiser features 25 selected photographs from If Only I Could
-        Tell You—a deeply personal collection of images taken during Erik’s time
-        in the United States. The photobook, still ongoing and shared under the
-        name erikfilmsxo, was created to share the experiences he never had the
-        chance to tell his late father, who passed away shortly after his return
-        to Myanmar.
+        This fundraiser features 25 selected photographs from *If Only I Could
+        Tell You*—a deeply personal collection of images taken during Erik’s
+        time in the United States. The photobook, still ongoing and shared under
+        the name erikfilmsxo, was created to share the experiences he never had
+        the chance to tell his late father, who passed away shortly after his
+        return to Myanmar.
       </p>
+
       <p class="mt-8 text-sunset-earthwood">
         Through Fund With 25, these photographs now serve a new purpose: to
         provide relief and support to those affected by the earthquake. 100% of
@@ -37,36 +45,116 @@
         purchase and share helps bring essential aid to those in need.
       </p>
 
-      <!-- Added new text for image resolution clarification -->
       <p class="mt-8 text-red-600">
         The photos displayed are in low resolution for preview purposes. The
         purchased photos will be provided in high resolution.
       </p>
 
-      <div class="flex justify-center flex-col gap-3 mt-10 sm:flex-row">
-        <!-- Learn More Button (inverted colors) -->
-        <a
-          class="items-center h-12 justify-center rounded-full font-semibold duration-200 focus:outline-none inline-flex px-6 py-3 text-center w-full border-2
-          bg-transparent border-sunset-mango text-sunset-mango
-          hover:bg-sunset-mango hover:text-sunset-roasted hover:border-sunset-mango
-          focus-visible:outline-sunset-mango focus-visible:ring-sunset-mango
-          lg:w-auto"
-          href="#learn-more"
-        >
-          Learn More
-        </a>
+      <!-- Pricing Information Section -->
+      <div class="mt-16 text-center">
+        <h2 class="text-3xl font-semibold text-sunset-roasted">
+          Supporters Appreciation
+        </h2>
+        <p class="mt-4 text-sunset-earthwood">
+          Pricing differs based on economic indicators such as purchasing
+          socio-economy and average income levels in each country. This allows
+          us to maintain fairness and maximize accessibility for donors across
+          diverse regions.
+        </p>
 
-        <!-- Buy Now Button -->
-        <a
-          class="items-center h-12 justify-center rounded-full font-semibold duration-200 focus:outline-none inline-flex px-6 py-3 text-center w-full border-2
-          bg-sunset-mango border-sunset-mango text-sunset-roasted
-          hover:bg-transparent hover:text-sunset-mango hover:border-sunset-mango
-          focus-visible:outline-sunset-mango focus-visible:ring-sunset-mango
-          lg:w-auto"
-          href="#buy-now"
-        >
-          Buy Now
-        </a>
+        <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- USA Card -->
+          <div class="border-2 border-sunset-mango p-4 rounded-lg text-center">
+            <h3 class="text-2xl text-sunset-roasted">🇺🇸 USA (USD)</h3>
+            <ul class="mt-4">
+              <li>$5 – Supporter → 1 digital photo</li>
+              <li>$10 – Contributor → up to 3 photos</li>
+              <li>$20 – Advocate → up to 8 photos</li>
+              <li>$35 – Patron → up to 15 photos</li>
+              <li>$50+ – Collector → up to 25 photos</li>
+            </ul>
+          </div>
+
+          <!-- UK Card -->
+          <div class="border-2 border-sunset-mango p-4 rounded-lg text-center">
+            <h3 class="text-2xl text-sunset-roasted">🇬🇧 UK (GBP)</h3>
+            <ul class="mt-4">
+              <li>£4 – Supporter → 1 photo</li>
+              <li>£8 – Contributor → up to 3 photos</li>
+              <li>£16 – Advocate → up to 8 photos</li>
+              <li>£28 – Patron → up to 15 photos</li>
+              <li>£40+ – Collector → up to 25 photos</li>
+            </ul>
+          </div>
+
+          <!-- Thailand Card -->
+          <div class="border-2 border-sunset-mango p-4 rounded-lg text-center">
+            <h3 class="text-2xl text-sunset-roasted">🇹🇭 Thailand (THB)</h3>
+            <ul class="mt-4">
+              <li>฿100 – Supporter → 1 photo</li>
+              <li>฿200 – Contributor → up to 3 photos</li>
+              <li>฿400 – Advocate → up to 8 photos</li>
+              <li>฿700 – Patron → up to 15 photos</li>
+              <li>฿1,000+ – Collector → up to 25 photos</li>
+            </ul>
+          </div>
+
+          <!-- Malaysia Card -->
+          <div class="border-2 border-sunset-mango p-4 rounded-lg text-center">
+            <h3 class="text-2xl text-sunset-roasted">🇲🇾 Malaysia (MYR)</h3>
+            <ul class="mt-4">
+              <li>RM10 – Supporter → 1 photo</li>
+              <li>RM20 – Contributor → up to 3 photos</li>
+              <li>RM40 – Advocate → up to 8 photos</li>
+              <li>RM70 – Patron → up to 15 photos</li>
+              <li>RM100+ – Collector → up to 25 photos</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="mt-8 text-sunset-earthwood">
+          P.S: All donors will also receive:
+          <ul class="list-disc ml-5 mt-4">
+            <li>A letter of appreciation from the artist</li>
+            <li>A letter of gratitude from the organizing committee</li>
+          </ul>
+        </p>
+      </div>
+
+      <!-- Process Section -->
+      <div class="mt-16 text-center">
+        <h2 class="text-3xl font-semibold text-sunset-roasted">
+          🔄 How It Works
+        </h2>
+        <div class="mt-6 text-left">
+          <ol class="list-decimal ml-8 space-y-3 text-sunset-earthwood">
+            <li>
+              Visit the Website: Learn about the project and how your support
+              helps earthquake relief in Myanmar.
+            </li>
+            <li>
+              Browse the Photo Collection: View the digital photographs
+              available as a thank-you for your donation.
+            </li>
+            <li>
+              Choose Your Country's Donation Form: Select the form with pricing
+              adjusted to your local currency.
+            </li>
+            <li>
+              Submit the Form with Your Selections: Complete your donation and
+              choose the photos you’d like to receive.
+            </li>
+            <li>
+              Receive Your Photos via Email: We’ll send your selected photos
+              within 24 hours, along with letters of gratitude.
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Buy Now Button Section -->
+      <div class="flex justify-center flex-col gap-3 mt-10 sm:flex-row">
+        <BuyNow client:idle />
       </div>
     </div>
   </div>
