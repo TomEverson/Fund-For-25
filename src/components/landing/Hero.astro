@@ -1,5 +1,5 @@
 ---
-import BuyNow from "./BuyNow.astro";
+import BuyNow from "./BuyNow";
 ---
 
 <main class="relative overflow-hidden">
@@ -154,7 +154,7 @@ import BuyNow from "./BuyNow.astro";
 
       <!-- Buy Now Button Section -->
       <div class="flex justify-center flex-col gap-3 mt-10 sm:flex-row">
-        <BuyNow client:idle />
+        <BuyNow client:load />
       </div>
     </div>
   </div>
